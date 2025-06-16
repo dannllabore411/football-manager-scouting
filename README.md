@@ -7,16 +7,16 @@ This standalone data science project explores player performance data exported f
 
 ## ⚙️ Pipeline Overview
 ### 1. Data Extraction & Cleaning  
-**Skills Demonstrated**: *Web data parsing, text cleaning, type conversion, percentage handling, missing value imputation*
+**Skills**: *Data scraping, data cleaning: text cleaning, type conversion, percentage handling, missing value imputation*
 - Parsed raw player data from an HTML table.
 - Cleaned monetary values, heights, distances, and percentages.
 - Converted appropriate columns to numeric values and standardized missing/placeholder values.
 ### 2. Role Mapping  
-**Skills Demonstrated**: *Data merging, categorical mapping*
+**Skills**: *Data merging, categorical mapping*
 - Mapped each player’s “Best Role” from FM24 to a broader positional group using `role_pos.csv`.
 - Dropped redundant FM-specific columns (e.g., "Inf", "Best Role", "Best Duty").
 ### 3. Feature Engineering  
-**Skills Demonstrated**: *Domain-based feature construction, conditional logic, normalization*
+**Skills**: *Data engineering: feature construction, feature evaluation*
 Derived new metrics designed to evaluate position-specific performance:
 - **Goalkeepers**: `Save%`, `xGP/90`, `Shots/Conc`
 - **Defenders**: `FoulPrev`, `DDAs`, `Hdr/90`, `Tck%`, `HDAs`
@@ -24,7 +24,7 @@ Derived new metrics designed to evaluate position-specific performance:
 - **Attackers**: `xG/Shot`, `Conv%`, `S/90`, `xGOP/90`
 These features are calculated per 90 minutes and designed to reflect in-game role effectiveness.
 ### 4. Scouting Output  
-**Skills Demonstrated**: *Exploratory data analysis*
+**Skills**: *Exploratory data analysis*
 - The final output is a cleaned and enriched dataframe of FM24 players, suitable for manual filtering or future modeling/scoring.
 
 ## ▶️ How to Run
