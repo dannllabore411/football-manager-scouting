@@ -1,11 +1,11 @@
-# 📊 FM24 Scouting & Player Performance Analysis
+# FM24 Scouting & Player Performance Analysis
 This standalone data science project explores player performance data exported from *Football Manager 2024 (FM24)* to assist with transfer scouting. The notebook identifies high-performing players from the Bulgarian First League based on key in-game statistics, enabling data-driven shortlisting of transfer targets.
 
-## 🔎 Data Sources
+## Data Sources
 - **Player Search Export (HTML)**: Exported directly from FM24’s Player Search screen, containing player attributes and match stats.
 - **Role-to-Position Mapping (CSV)**: A manually curated file (`role_pos.csv`) that maps FM-specific roles (e.g., Ball-Playing Defender, Deep-Lying Forward) to generalized position groups (`CB`, `CM`, `ST`, etc.).
 
-## ⚙️ Pipeline Overview
+## Pipeline Overview
 ### 1. Data Extraction & Cleaning  
 **Skills**: *Data scraping, data cleaning: text cleaning, type conversion, percentage handling, missing value imputation*
 - Parsed raw player data from an HTML table.
@@ -27,19 +27,19 @@ These features are calculated per 90 minutes and designed to reflect in-game rol
 **Skills**: *Exploratory data analysis*
 - The final output is a cleaned and enriched dataframe of FM24 players, suitable for manual filtering or future modeling/scoring.
 
-## ▶️ How to Run
+## How to Run
 1. Export a custom Player Search view from FM24 and save it as an `.html` file.
 2. Place the HTML file and `role_pos.csv` in the working directory.
 3. Run the notebook (`fm24_old.ipynb`) in a Python environment with the following packages:
    pip install pandas numpy scipy
 4. Outputs are printed directly in the notebook.
 
-## 📁 Outputs
+## Outputs
 - A `pandas.DataFrame` containing player info and advanced metrics.
 - Outputs are printed directly in the notebook.
 - No files are written to disk at this stage.
 
-## 🚧 Future Work
+## Future Work
 - **Scoring System**: Incorporate weighted role-based scores to rank players automatically.
 - **Streamlit App**: Add filters and visualizations for a more interactive scouting dashboard.
 - **Multi-league Integration**: Expand the view to include other leagues and simulate global scouting.
